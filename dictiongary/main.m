@@ -10,7 +10,7 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-       NSDictionary *dic1 = [[NSDictionary alloc]init];
+      NSDictionary *dic1 = [[NSDictionary alloc]init];
         NSDictionary *dic2 = [[NSDictionary alloc]initWithObjectsAndKeys:@"2.5",@"apple",@"2.2",@"orange", nil];
         NSDictionary *dic3 = @{@"1.64":@"beijing",@"1.28":@"tianjin"};
        // NSLog(@"%@ %@ %@",dic1,dic2,dic3);
@@ -29,11 +29,24 @@ int main(int argc, const char * argv[]) {
         }
         NSArray *array3=@[@"abc",@"123"];
         NSDictionary *dic4 = [[NSDictionary alloc]initWithObjectsAndKeys:@"value1",@"keya",@"value2",@"keyb",array3,@"keyd", nil];
-        NSLog(@"dic4=%@",dic4);
+       // NSLog(@"dic4=%@",dic4);
         for (int i =0; i < [dic4 allKeys].count; i++) {
            id item = [dic4 valueForKey:[[dic4 allKeys]objectAtIndex:i]];
-            NSLog(@"item=%@",item);
+        //    NSLog(@"item=%@",item);
         }
+   
+        NSMutableDictionary *mdic5 = [[NSMutableDictionary alloc]init];
+        [mdic5 setValue:@"3" forKey:@"apple"];
+        [mdic5 setValue:@"2.5" forKey:@"banana"];
+        [mdic5 setValue:@"8" forKey:@"apple"];
+     //   NSLog(@"%@",mdic5);
+        [mdic5 removeAllObjects];
+      //  NSLog(@"%@",mdic5);
+        
+        NSDictionary *dic5 = @{@"北京":@"首都"};
+        NSLog(@"%@",dic5);
+        NSString *str5 = [dic5 valueForKey:@"北京"];
+        NSLog(@"%@",str5);
         
         
     }
