@@ -27,13 +27,12 @@ int main(int argc, const char * argv[]) {
         for (NSString *item2 in dic2){
          //   NSLog(@"item2=%@",item2);
         }
-        NSArray *array4=@[@"abc",@"123"];
-        NSDictionary *dic4 = [[NSDictionary alloc]initWithObjectsAndKeys:@"value1",@"keya",@"value2",@"key2",@"array4",@"keyd", nil];
-        
+        NSArray *array3=@[@"abc",@"123"];
+        NSDictionary *dic4 = [[NSDictionary alloc]initWithObjectsAndKeys:@"value1",@"keya",@"value2",@"keyb",@"array3",@"keyd", nil];
         NSLog(@"dic4=%@",dic4);
         for (int i =0; i < [dic4 allKeys].count; i++) {
-            id item1 = [dic4 valueForKey:[[dic4 allKeys]objectAtIndex:i]];
-            NSLog(@"item1=%@",item1);
+           id item = [dic4 valueForKey:[[dic4 allKeys]objectAtIndex:i]];
+            NSLog(@"item=%@",item);
         }
         
         
