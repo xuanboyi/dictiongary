@@ -28,7 +28,7 @@ int main(int argc, const char * argv[]) {
          //   NSLog(@"item2=%@",item2);
         }
         NSArray *array3=@[@"abc",@"123"];
-        NSDictionary *dic4 = [[NSDictionary alloc]initWithObjectsAndKeys:@"value1",@"keya",@"value2",@"keyb",@"array3",@"keyd", nil];
+        NSDictionary *dic4 = [[NSDictionary alloc]initWithObjectsAndKeys:@"value1",@"keya",@"value2",@"keyb",array3,@"keyd", nil];
         NSLog(@"dic4=%@",dic4);
         for (int i =0; i < [dic4 allKeys].count; i++) {
            id item = [dic4 valueForKey:[[dic4 allKeys]objectAtIndex:i]];
